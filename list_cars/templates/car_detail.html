@@ -7,7 +7,7 @@
         body {
             font-family: Arial, Helvetica, sans-serif;
         }
-        h1, h2 {
+        h1, h2, form {
             text-align: center;
         }
     </style>
@@ -20,5 +20,10 @@
     <li>Engine: {{ car.engine }}</li>
 </ul>
 <h2>Rating: {{ car.rating }}</h2>
+<form action="car_detail.html" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Rate">
+</form>
 </body>
 </html>
