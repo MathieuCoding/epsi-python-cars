@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Cars</title>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            h1 {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Cars</h1>
+        <ul>
+            {% for car in cars  %}
+                <li>{{ car.brand }} - {{ car.model }}</li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
