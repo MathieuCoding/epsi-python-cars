@@ -8,4 +8,4 @@ class Car(models.Model):
     price = models.IntegerField()
     engine = models.CharField(max_length=200)
     def __str__(self):
-        return self.name + ' - ' + self.brand + ' - ' + self.model
+        return self.brand + ' - ' + self.model + ' - ' + self.engine
