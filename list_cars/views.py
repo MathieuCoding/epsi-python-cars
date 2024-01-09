@@ -4,11 +4,11 @@ from .forms import CarForm
 
 def car_list(request):
     cars = Car.objects.all()
-    return render(request, 'cars_list.html', {'cars': cars})
+    return render(request, 'list_cars/cars_list.html', {'cars': cars})
 
 def car_detail(request, pk):
     car = Car.objects.get(pk=pk)
-    return render(request, 'car_detail.html', {'car': car})
+    return render(request, 'list_cars/car_detail.html', {'car': car})
 
 def car_rating(request, pk):
     form = CarForm(request.POST)
@@ -20,4 +20,4 @@ def car_rating(request, pk):
             form.save()
         else:
             form = CarForm()
-    return render(request, 'car_detail.html', {'form': form})
+    return render(request, 'list_cars/car_detail.html', {'form': form})
